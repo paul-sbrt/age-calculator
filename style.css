@@ -70,6 +70,9 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.container {
+  position: relative;
+}
 
 .custom-separator {
   border: none;
@@ -86,9 +89,9 @@ input[type="number"]::-webkit-inner-spin-button {
   border: none;
   background-color: hsl(259, 100%, 65%);
   position: absolute;
-  right: 32.5%;
-  top: 34.5%;
   cursor: pointer;
+  right: calc(100% - 72.5% - 90px - 7.5%);
+  top: calc(5% + 260px / 2);
 }
 
 .btn-calc:hover {
@@ -132,19 +135,120 @@ input.error {
   .custom-separator {
     width: 70%;
   }
-
-  .btn-calc {
-    right: 28.5%;
-    top: 35%;
-  }
 }
 
 @media screen and (max-width: 1404px) {
   .custom-separator {
     width: 73%;
   }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 350px;
+    height: 500px;
+    margin: 30% auto;
+  }
+
+  .form-group {
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: 4%;
+  }
+
+  .form label {
+    margin-bottom: 5px;
+    font-size: 10px;
+    padding-left: 3%;
+    margin-left: 10px;
+  }
+
+  .form input {
+    width: 80px;
+    height: 50px;
+    font-size: 10px;
+    padding-left: 8%;
+    margin-left: 10px;
+  }
+
+  .form input::placeholder {
+    font-size: 20px;
+    margin-left: 10px;
+    padding-left: 5%;
+  }
+
+  .custom-separator {
+    width: 85%;
+    margin-top: 20%;
+    margin-left: 7.5%;
+  }
+
   .btn-calc {
-    right: 26.5%;
-    top: 28.5%;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    right: calc(100% - 60.5%);
+    top: calc(5% + 190px / 2);
+  }
+
+  .result {
+    font-size: 57px;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 350px;
+    height: 500px;
+    margin: 30% auto;
+  }
+
+  .form-group {
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: 4%;
+  }
+
+  .form label {
+    margin-bottom: 5px;
+    font-size: 10px;
+    padding-left: 3%;
+    margin-left: 10px;
+  }
+
+  .form input {
+    width: 80px;
+    height: 50px;
+    font-size: 10px;
+    padding-left: 8%;
+    margin-left: 10px;
+  }
+
+  .form input::placeholder {
+    font-size: 20px;
+    margin-left: 10px;
+    padding-left: 5%;
+  }
+
+  .custom-separator {
+    width: 85%;
+    margin-top: 20%;
+    margin-left: 7.5%;
+  }
+
+  .btn-calc {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    right: calc(100% - 60.5%);
+    top: calc(5% + 230px / 2);
+  }
+
+  .result {
+    font-size: 57px;
+    margin-left: 5%;
+    margin-top: 10%;
   }
 }
